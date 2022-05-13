@@ -8,3 +8,9 @@ vi., 13 de may. de 2022 11:32:09:
  tests:  0|5
 total_score: 0/70
 94ca579
+vi., 13 de may. de 2022 11:34:17: 
+ sudoku.c | 1 +
+ 1 file changed, 1 insertion(+)
+ tests:  0|5
+total_score: 0/70
+915103a
