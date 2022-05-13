@@ -145,3 +145,17 @@ vi., 13 de may. de 2022 12:02:10:
  tests:  5|3
 total_score: 35/70
 2fdafef
+vi., 13 de may. de 2022 12:02:36: 
+ sudoku.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function 'is_valid':
+sudoku.c:64:17: error: unused variable 'j' [-Werror=unused-variable]
+             int j=3*(k%3) + (p%3) ;
+                 ^
+sudoku.c:63:17: error: unused variable 'i' [-Werror=unused-variable]
+             int i=3*(k/3) + (p/3) ;
+                 ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+b764a82
