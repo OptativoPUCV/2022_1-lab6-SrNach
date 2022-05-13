@@ -59,6 +59,7 @@ List* get_adj_nodes(Node* n){
       if (new->sudo[i][j] == 0){
         k = 1;
       }
+      if (k == 1)break;
     }
     if (k == 1)break;
   }
