@@ -56,8 +56,6 @@ int num;
           if (k != j && n->sudo[i][k] == num) return 0;
           if (i != k && n->sudo[k][j] == num) return 0;
         }
-        
-
       }
     }
   }
@@ -82,6 +80,8 @@ List* get_adj_nodes(Node* n){
     if (k == 1)break;
   }
   printf("%d %d",i,j);
+
+  if (i == 9 && j == 9) return list;
 
   int num = 1;
   while (num <= 9){
