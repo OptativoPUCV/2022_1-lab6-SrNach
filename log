@@ -115,3 +115,9 @@ test.c:245:5: error: 'main' defined but not used [-Werror=unused-function]
 cc1.exe: all warnings being treated as errors
 Compilation failed
 7e39aae
+vi., 13 de may. de 2022 11:56:49: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  4|4
+total_score: 25/70
+960b995

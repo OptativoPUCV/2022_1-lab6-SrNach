@@ -45,7 +45,6 @@ void print_node(Node* n){
 
 int is_valid(Node* n){
 int num;
-print_node(n){
   for (int i = 0 ; i < 9 ; i ++){
     for (int j = 0 ; j < 9 ; j++){
 
@@ -82,6 +81,7 @@ List* get_adj_nodes(Node* n){
     }
     if (k == 1)break;
   }
+  printf("%d %d",i,j);
 
   int num = 1;
   while (num <= 9){
