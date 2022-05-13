@@ -79,7 +79,7 @@ List* get_adj_nodes(Node* n){
     }
     if (k == 1)break;
   }
-  printf("%d %d",i,j);
+  //printf("%d %d",i,j);
 
   if (i == 9 && j == 9) return list;
 
