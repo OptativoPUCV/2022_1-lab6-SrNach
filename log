@@ -173,3 +173,9 @@ sudoku.c:63:17: error: unused variable 'i' [-Werror=unused-variable]
 cc1.exe: all warnings being treated as errors
 Compilation failed
 f14401c
+sá., 14 de may. de 2022 22:01:38: 
+ sudoku.c | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+ tests:  1|4
+total_score: 10/70
+44bde77
