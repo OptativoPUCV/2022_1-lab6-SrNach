@@ -240,3 +240,9 @@ sá., 14 de may. de 2022 23:07:08:
  tests:  3|3
 total_score: 25/70
 3cfa8d4
+sá., 14 de may. de 2022 23:08:13: 
+ sudoku.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+ tests:  1|4
+total_score: 10/70
+e2def11
