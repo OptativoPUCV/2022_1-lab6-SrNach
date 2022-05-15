@@ -58,13 +58,13 @@ int num;
         }
 
         //Submatriz
-        for (int k = 0 ; k < 9 ; k++){
-          for(int p=0 ; p<9; p++){
-            int x=3*(k/3) + (p/3);
-            int y=3*(k%3) + (p%3);
-            if (n->sudo[x][y] == num) return 0;
-          }
+        int k = 4, p;
+        for(p = 0 ; p < 9 ; p++){
+          int x = 3*(k/3) + (p/3);
+          int y = 3*(k%3) + (p%3);
+          if (n->sudo[x][y] == num) return 0;
         }
+
       }
     }
   }
@@ -97,7 +97,7 @@ List* get_adj_nodes(Node* n){
     Node * nn = createNode();
     nn = copy(n);
     nn->sudo[i][j] = num;
-    //if (is_valid(nn))
+    if (is_valid(nn))
       pushBack(list, nn);
     num++;
   }

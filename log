@@ -197,3 +197,9 @@ sá., 14 de may. de 2022 22:06:03:
  tests:  3|3
 total_score: 25/70
 62b44f5
+sá., 14 de may. de 2022 22:14:26: 
+ sudoku.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+ tests:  1|4
+total_score: 10/70
+f1b78fb
