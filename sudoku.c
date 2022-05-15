@@ -50,9 +50,8 @@ int nums [10];
 for (int i = 0 ; i < 9 ; i++){
   for (int k = 0 ; k < 10 ; k++) nums[k] = 0;
   for (int j = 0 ; j < 9 ; j++){
-    if (nums[n->sudo[i][j]] == 0){
-      nums[n->sudo[i][j]] = 1;
-    }else return 0;
+    if (nums[n->sudo[i][j]] != 0) return 0;
+    else nums[n->sudo[i][j]] = 1;
   }
 }
 
@@ -60,14 +59,13 @@ for (int i = 0 ; i < 9 ; i++){
 for (int i = 0 ; i < 9 ; i++){
   for (int k = 0 ; k < 10 ; k++) nums[k] = 0;
   for (int j = 0 ; j < 9 ; j++){
-    if (nums[n->sudo[j][i]] == 0){
-      nums[n->sudo[j][i]] = 1;
-    }else return 0;
+    if (nums[n->sudo[j][i]] != 0) return 0;
+    else nums[n->sudo[j][i]] = 1;
   }
 }
+  
   return 1;
 }
-
 
 List* get_adj_nodes(Node* n){
   List* list=createList();
@@ -98,7 +96,6 @@ List* get_adj_nodes(Node* n){
   return list;
 }
 
-
 int is_final(Node* n){
   for (int i = 0 ; i < 9 ; i++){
     for (int j = 0 ; j < 9 ; j++){
@@ -111,8 +108,6 @@ int is_final(Node* n){
 Node* DFS(Node* initial, int* cont){
   return NULL;
 }
-
-
 
 /*
 int main( int argc, char *argv[] ){
