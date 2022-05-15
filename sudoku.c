@@ -122,11 +122,11 @@ Node* DFS(Node* initial, int* cont){
   push(S,initial);
   
   while (first(S)){
-    Node *nn = top(S);
+    Node *n = top(S);
     pop(S);
-    if (is_final(nn))return nn;
+    if (is_final(n)) return n;
 
-    List * adjs = get_adj_nodes(nn);
+    List * adjs = get_adj_nodes(n);
     Node* nodo = first(adjs);
     while (nodo != NULL){
       push(S,nodo);
