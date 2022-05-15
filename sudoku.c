@@ -62,7 +62,7 @@ int num;
         for(p = 0 ; p < 9 ; p++){
           int x = 3*(k/3) + (p/3);
           int y = 3*(k%3) + (p%3);
-          if (n->sudo[x][y] == num) return 0;
+          if ((i!=x && j!=y) && n->sudo[x][y] == num) return 0;
         }
 
       }
