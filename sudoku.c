@@ -44,26 +44,37 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
-int nums [10];
-
-// Filas
-for (int i = 0 ; i < 9 ; i++){
-  for (int k = 0 ; k < 10 ; k++) nums[k] = 0;
-  for (int j = 0 ; j < 9 ; j++){
-    if (nums[n->sudo[i][j]] != 0) return 0;
-    else nums[n->sudo[i][j]] = 1;
+  // Filas
+  for (int i = 0 ; i < 9 ; i++){
+    int nums [10] = {0};
+    for (int j = 0 ; j < 9 ; j++){
+      if (nums[n->sudo[i][j]] == 1) return 0;
+      else if (n->sudo[i][j] != 0)
+        nums[n->sudo[i][j]]++;
+    }
   }
-}
-
-// Columnas
-for (int i = 0 ; i < 9 ; i++){
-  for (int k = 0 ; k < 10 ; k++) nums[k] = 0;
-  for (int j = 0 ; j < 9 ; j++){
-    if (nums[n->sudo[j][i]] != 0) return 0;
-    else nums[n->sudo[j][i]] = 1;
+  // Columnas
+  for (int i = 0 ; i < 9 ; i++){
+    int nums [10] = {0};
+    for (int j = 0 ; j < 9 ; j++){
+      if (nums[n->sudo[j][i]] == 1) return 0;
+      else if (n->sudo[j][i] != 0)
+        nums[n->sudo[j][i]]++;
+    }
   }
-}
   
+  for (int x = 0 ; x < 9 ; x++){
+    int k = x;
+    int p;
+    int nums[10] = {0};
+    for(p = 0 ; p < 9 ; p++){
+        int i=3*(k/3) + (p/3) ;
+        int j=3*(k%3) + (p%3) ;
+        if(nums[n->sudo[i][j]] == 1)return 0;
+        else if(n->sudo[i][j] != 0)
+          nums[n->sudo[i][j]]++;
+    }
+  } 
   return 1;
 }
 
