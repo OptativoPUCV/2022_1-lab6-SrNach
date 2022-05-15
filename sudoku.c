@@ -44,6 +44,7 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
+/*
 int num;
   for (int i = 0 ; i < 9 ; i ++){
     for (int j = 0 ; j < 9 ; j++){
@@ -57,19 +58,31 @@ int num;
           if (i != k && n->sudo[k][j] == num) return 0;
         }
 
-        //Submatriz
-        int k = 4, p;
-        for(p = 0 ; p < 9 ; p++){
-          int x = 3*(k/3) + (p/3);
-          int y = 3*(k%3) + (p%3);
-          if ((i!=x && j!=y) && n->sudo[x][y] == num) return 0;
-        }
-
       }
     }
+  }*/
+
+int nums [10];
+for (int i = 0 ; i < 10 ; i++) nums[i] = 0;
+
+// Filas
+for (int i = 0 ; i < 9 ; i++){
+  for (int j = 0 ; j < 9 ; j++){
+    if (nums[n->sudo[i][j]] == 0){
+      nums[n->sudo[i][j]] = 1;
+    }else return 0;
   }
+}
 
-
+for (int i = 0 ; i < 10 ; i++) nums[i] = 0;
+// Columnas
+for (int i = 0 ; i < 9 ; i++){
+  for (int j = 0 ; j < 9 ; j++){
+    if (nums[n->sudo[j][i]] == 0){
+      nums[n->sudo[j][i]] = 1;
+    }else return 0;
+  }
+}
   return 1;
 }
 
