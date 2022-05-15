@@ -126,14 +126,14 @@ Node* DFS(Node* initial, int* cont){
     pop(S);
     if (is_final(nn))return nn;
 
-    List * adj = get_adj_nodes(nn);
-    Node* node = first(adj);
-    while (node){
-      push(S,node);
-      node = next(adj);
+    List * adjs = get_adj_nodes(nn);
+    Node* nodo = first(adjs);
+    while (nodo != NULL){
+      push(S,nodo);
+      nodo = next(adjs);
     }
     (*cont)++;
-    free(node);
+    free(nodo);
   }
   
   return NULL;
